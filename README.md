@@ -1,4 +1,4 @@
-# vivid-img
+# react-smart-loader
 
 Smart, network-aware React image component in **< 2KB gzipped** with **zero dependencies**.
 
@@ -9,7 +9,7 @@ cross-fade transitions, and a global memory cache — all behind a single
 ## Install
 
 ```bash
-npm install vivid-img
+npm install react-smart-loader
 ```
 
 `react` and `react-dom` (>= 18) are peer dependencies. React 19's resource
@@ -18,7 +18,7 @@ loading (`ReactDOM.preload`) is used automatically when available.
 ## Usage
 
 ```tsx
-import { SmartImage } from 'vivid-img';
+import { SmartImage } from 'react-smart-loader';
 
 <SmartImage
   src="https://cdn.example.com/hd-product.jpg"
@@ -56,7 +56,7 @@ into a placeholder, import the matching **separate entry point** — this keeps 
 decoder out of the base bundle unless you use it:
 
 ```ts
-import { blurHashToDataURL } from 'vivid-img/blurhash';
+import { blurHashToDataURL } from 'react-smart-loader/blurhash';
 
 const blur = blurHashToDataURL('LGF5?M9F00~q_MOffQWB00%MwbRj', 32, 32);
 // → pass to <SmartImage blurSource={blur} />
@@ -64,9 +64,9 @@ const blur = blurHashToDataURL('LGF5?M9F00~q_MOffQWB00%MwbRj', 32, 32);
 
 ### ThumbHash
 
-`vivid-img/thumbhash` exposes the final API surface, but the decode body is not
+`react-smart-loader/thumbhash` exposes the final API surface, but the decode body is not
 yet implemented (see `src/thumbhash.ts`). It throws until a decode strategy is
-chosen — use `vivid-img/blurhash` or a plain base64/micro-URL in the meantime.
+chosen — use `react-smart-loader/blurhash` or a plain base64/micro-URL in the meantime.
 
 ## Predictive preloading
 
@@ -74,7 +74,7 @@ Beyond the `preloadNext` prop (warmed on hover), `usePredictivePreload` watches
 scroll velocity and warms upcoming images before they enter the viewport:
 
 ```tsx
-import { usePredictivePreload } from 'vivid-img';
+import { usePredictivePreload } from 'react-smart-loader';
 
 const upcoming = items.map((i) => i.imageUrl);
 usePredictivePreload(upcoming, { count: 2, velocityThreshold: 0.4 });
@@ -105,9 +105,9 @@ npm run typecheck  # tsc --noEmit
 
 | Entry | Gzipped | Ships when |
 | --- | --- | --- |
-| `vivid-img` | ~1.7 KB | always |
-| `vivid-img/blurhash` | ~1.0 KB | imported |
-| `vivid-img/thumbhash` | ~0.4 KB | imported |
+| `react-smart-loader` | ~1.7 KB | always |
+| `react-smart-loader/blurhash` | ~1.0 KB | imported |
+| `react-smart-loader/thumbhash` | ~0.4 KB | imported |
 
 ESM + CJS, full TypeScript types, `"sideEffects": false` for tree-shaking.
 

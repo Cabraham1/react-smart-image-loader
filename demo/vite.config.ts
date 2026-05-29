@@ -10,9 +10,9 @@ export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: {
-      'vivid-img/blurhash': src('../src/blurhash.ts'),
-      'vivid-img/thumbhash': src('../src/thumbhash.ts'),
-      'vivid-img': src('../src/index.ts'),
+      'react-smart-loader/blurhash': src('../src/blurhash.ts'),
+      'react-smart-loader/thumbhash': src('../src/thumbhash.ts'),
+      'react-smart-loader': src('../src/index.ts'),
     },
   },
 });

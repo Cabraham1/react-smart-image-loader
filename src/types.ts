@@ -26,7 +26,7 @@ export interface SmartImageProps
   /**
    * Source for the `blur` placeholder. Accepts a base64 data URL, a micro
    * thumbnail URL, or a BlurHash/ThumbHash string (decode via the
-   * `vivid-img/blurhash` or `vivid-img/thumbhash` entry points).
+   * `react-smart-loader/blurhash` or `react-smart-loader/thumbhash` entry points).
    */
   blurSource?: string;
 

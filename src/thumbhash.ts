@@ -1,5 +1,5 @@
 /**
- * ThumbHash decoder entry point (`vivid-img/thumbhash`).
+ * ThumbHash decoder entry point (`react-smart-loader/thumbhash`).
  *
  * ThumbHash (evanw/thumbhash, MIT) produces smaller, higher-fidelity
  * placeholders than BlurHash and encodes the average colour plus optional
@@ -10,7 +10,7 @@
  * MIT License, Copyright (c) 2023 Evan Wallace.
  *
  * @example
- * import { thumbHashToDataURL } from 'vivid-img/thumbhash';
+ * import { thumbHashToDataURL } from 'react-smart-loader/thumbhash';
  * const blur = thumbHashToDataURL('1QcSHQRnh493V4dIh4eXh1h4kJUI'); // base64
  * <SmartImage src={hd} aspectRatio={4/3} blurSource={blur} />
  */

@@ -1,11 +1,11 @@
 /**
  * Zero-dependency BlurHash decoder → data URL, for the `blurSource` prop.
  *
- * Ships only when imported from `vivid-img/blurhash`, keeping it out of the
+ * Ships only when imported from `react-smart-loader/blurhash`, keeping it out of the
  * base bundle. Algorithm per the BlurHash spec (woltapp/blurhash).
  *
  * @example
- * import { blurHashToDataURL } from 'vivid-img/blurhash';
+ * import { blurHashToDataURL } from 'react-smart-loader/blurhash';
  * const blur = blurHashToDataURL('LGF5?M9F00~q_MOffQWB00%MwbRj', 32, 32);
  * <SmartImage src={hd} aspectRatio={16/9} blurSource={blur} />
  */
@@ -17,7 +17,7 @@ function decode83(str: string): number {
   let value = 0;
   for (const c of str) {
     const i = DIGIT.indexOf(c);
-    if (i === -1) throw new Error(`vivid-img: invalid BlurHash character "${c}"`);
+    if (i === -1) throw new Error(`react-smart-loader: invalid BlurHash character "${c}"`);
     value = value * 83 + i;
   }
   return value;
@@ -61,7 +61,7 @@ export function decodeBlurHash(
   height: number,
   punch = 1
 ): Uint8ClampedArray {
-  if (hash.length < 6) throw new Error('vivid-img: BlurHash too short');
+  if (hash.length < 6) throw new Error('react-smart-loader: BlurHash too short');
 
   const sizeFlag = decode83(hash[0]!);
   const numY = Math.floor(sizeFlag / 9) + 1;
@@ -71,7 +71,7 @@ export function decodeBlurHash(
 
   const expected = 4 + 2 * numX * numY;
   if (hash.length !== expected) {
-    throw new Error(`vivid-img: BlurHash length mismatch (expected ${expected})`);
+    throw new Error(`react-smart-loader: BlurHash length mismatch (expected ${expected})`);
   }
 
   const colors: [number, number, number][] = new Array(numX * numY);

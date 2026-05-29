@@ -86,7 +86,7 @@ export function SmartImage(props: SmartImageProps) {
         backgroundColor: 'rgba(0,0,0,0.06)',
         backgroundImage: SHIMMER_BG,
         backgroundSize: '200% 100%',
-        animation: 'vivid-img-shimmer 1.4s ease-in-out infinite',
+        animation: 'react-smart-loader-shimmer 1.4s ease-in-out infinite',
       };
     }
     return base;
@@ -131,7 +131,7 @@ export function SmartImage(props: SmartImageProps) {
         />
       ) : null}
       {placeholder === 'shimmer' ? (
-        <style>{`@keyframes vivid-img-shimmer{0%{background-position:200% 0}100%{background-position:-200% 0}}`}</style>
+        <style>{`@keyframes react-smart-loader-shimmer{0%{background-position:200% 0}100%{background-position:-200% 0}}`}</style>
       ) : null}
     </div>
   );

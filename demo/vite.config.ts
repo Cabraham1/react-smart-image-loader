@@ -10,9 +10,9 @@ export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: {
-      'react-smart-loader/blurhash': src('../src/blurhash.ts'),
-      'react-smart-loader/thumbhash': src('../src/thumbhash.ts'),
-      'react-smart-loader': src('../src/index.ts'),
+      '@cabraham/react-smart-loader/blurhash': src('../src/blurhash.ts'),
+      '@cabraham/react-smart-loader/thumbhash': src('../src/thumbhash.ts'),
+      '@cabraham/react-smart-loader': src('../src/index.ts'),
     },
   },
 });

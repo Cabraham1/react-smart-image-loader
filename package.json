@@ -1,6 +1,9 @@
 {
-  "name": "react-smart-loader",
-  "version": "0.1.0",
+  "name": "@cabraham/react-smart-loader",
+  "version": "1.1.0",
+  "publishConfig": {
+    "access": "public"
+  },
   "description": "Smart, network-aware React image component: lazy loading, blur/shimmer placeholders, exponential-backoff retry, and zero-CLS transitions in <4KB.",
   "type": "module",
   "sideEffects": false,

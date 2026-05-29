@@ -1,5 +1,5 @@
 {
-  "name": "react-smart-loader-demo",
+  "name": "@cabraham/react-smart-loader-demo",
   "private": true,
   "type": "module",
   "scripts": {

@@ -1,7 +1,7 @@
 import { useMemo, useRef, useState } from 'react';
-import { SmartImage, usePredictivePreload } from 'react-smart-loader';
-import { blurHashToDataURL } from 'react-smart-loader/blurhash';
-import { thumbHashToDataURL } from 'react-smart-loader/thumbhash';
+import { SmartImage, usePredictivePreload } from '@cabraham/react-smart-loader';
+import { blurHashToDataURL } from '@cabraham/react-smart-loader/blurhash';
+import { thumbHashToDataURL } from '@cabraham/react-smart-loader/thumbhash';
 
 const img = (seed: number | string, w = 600, h = 400) =>
   `https://picsum.photos/seed/${seed}/${w}/${h}`;
@@ -23,7 +23,7 @@ export function App() {
   return (
     <div className="wrap">
       <header>
-        <h1>react-smart-loader</h1>
+        <h1>@cabraham/react-smart-loader</h1>
         <p>Smart, network-aware React image loading — live demo.</p>
         <div className="badges">
           <span className="badge">&lt; 2KB gzipped</span>
@@ -144,7 +144,7 @@ function RetryFallback() {
               maxRetries={2}
               placeholder="shimmer"
               alt="Broken image with fallback"
-              onErrorFinal={() => console.log('react-smart-loader: fell back')}
+              onErrorFinal={() => console.log('@cabraham/react-smart-loader: fell back')}
             />
           </div>
           <p className="label">broken src → fallbackSrc after retries</p>

@@ -1,0 +1,31 @@
+:root {
+  font-family: system-ui, -apple-system, sans-serif;
+  color: #1a1a1a;
+  background: #fafafa;
+}
+* { box-sizing: border-box; }
+body { margin: 0; }
+.wrap { max-width: 1040px; margin: 0 auto; padding: 32px 20px 120px; }
+header h1 { font-size: 28px; margin: 0 0 4px; }
+header p { color: #666; margin: 0 0 8px; }
+.badges { display: flex; gap: 8px; flex-wrap: wrap; margin: 12px 0 4px; }
+.badge {
+  font-size: 12px; background: #eef; color: #335; padding: 3px 9px;
+  border-radius: 999px; border: 1px solid #dde;
+}
+section { margin-top: 48px; }
+section h2 { font-size: 18px; margin: 0 0 4px; }
+section .desc { color: #666; font-size: 14px; margin: 0 0 16px; }
+.grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+@media (max-width: 700px) { .grid { grid-template-columns: repeat(2, 1fr); } }
+.card { border-radius: 12px; overflow: hidden; border: 1px solid #eee; background: #fff; }
+.row { display: flex; gap: 16px; align-items: flex-start; flex-wrap: wrap; }
+.row > div { flex: 1; min-width: 240px; }
+.label { font-size: 13px; color: #444; margin: 6px 0 0; }
+button {
+  font: inherit; padding: 8px 14px; border-radius: 8px; border: 1px solid #ccc;
+  background: #fff; cursor: pointer;
+}
+button:hover { background: #f0f0f0; }
+.tall { height: 1200px; display: flex; align-items: flex-end; color: #999; }
+.hint { font-size: 13px; color: #888; }
